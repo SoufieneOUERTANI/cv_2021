@@ -1,1 +1,7 @@
-test
+Il manque
+- Général :
+  - Apporter les modifications du CV, issues du cours
+- L'impression :
+  - Les fonds d'écran des barres de progression CSS ne s'affichent pas
+  - Afficher l'adresse LinkedIn et Github lors de l'impression
+  - Faire un saut de page sur les sections
