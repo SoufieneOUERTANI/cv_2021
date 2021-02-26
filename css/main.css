@@ -81,7 +81,6 @@ html {
   }
 }
 
-/*>>>777*/
 nav a {
   display: inline-block;
   text-decoration: none;
@@ -108,6 +107,9 @@ p {
   text-align: justify;
 }
 
+
+.offset-md-1 {
+  margin-left: 5%; }
 .theme{
     text-decoration: underline;
 }
@@ -146,7 +148,6 @@ p {
   opacity: 1;
 }
 
-/*<<<777*/
 /* Bordure de la section experience/formation*/
 .timeline {
   border-left: 5px solid #E6E9ED;
@@ -197,7 +198,6 @@ p {
     padding: 0;
   }
 
-  /*>>>777 */
   .timeline {
     border-left: 2px solid #E6E9ED;
   }
@@ -222,7 +222,6 @@ p {
     margin: 0;
     padding: 1rem;
   }
-  /*<<<777*/
 }
 
 /* Couleur de bordure de la section experience/foramtion*/
