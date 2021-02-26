@@ -10,9 +10,6 @@
   font-style: normal;
 }
 
-/* Buttons */
-/* Inputs */
-/* Timeline custom component */
 /* >>> Entete et bandeau */
 html {
   scroll-behavior: smooth;
@@ -64,7 +61,7 @@ html {
   filter: grayscale(100%);
 }
 
-@media (min-width: 48em) {
+@media (min-width: 48rem) {
   .site-title {
     float: left;
   }
@@ -77,13 +74,16 @@ html {
     margin-bottom: -80px;
     margin-left: 0;
   }
+
+  .site-bandeau {
+    margin-bottom: 3rem !important;
+    ;
+  }
 }
 
-
-/*>>>77*/
+/*>>>777*/
 nav a {
   display: inline-block;
-  padding: 0 1em;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
@@ -101,28 +101,19 @@ nav a {
   top: 0;
   width: 100%;
   z-index: 100;
-  font-size: 0.85em;
-}
-
-#index a {
-  padding: 0.1em 0;
+  font-size: 0.85rem;
 }
 
 p {
   text-align: justify;
 }
 
-/*???*/
-#about {
-  font-size: 0.85em;
+.theme{
+    text-decoration: underline;
 }
 
 .col-sm-4 {
   font-weight: bold;
-}
-
-.introduction {
-  float: right;
 }
 
 .text-muted {
@@ -135,49 +126,37 @@ p {
 
 #myBtn {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Fixed/sticky position */
   bottom: 20px;
-  /* Place the button at the bottom of the page */
   right: 30px;
-  /* Place the button 30px from the right */
   z-index: 99;
-  /* Make sure it does not overlap */
   border: none;
-  /* Remove borders */
   outline: none;
-  /* Remove outline */
   background-color: #eb596e;
-  /* Set a background color */
   color: white;
-  /* Text color */
   cursor: pointer;
-  /* Add a mouse pointer on hover */
   padding: 5px;
-  /* Some padding */
   border-radius: 10px;
-  /* Rounded corners */
   font-size: 15px;
-  /* Increase font size */
+  opacity: 0.65;
 }
 
 #myBtn:hover {
   background-color: #555;
-  /* Add a dark-grey background on hover */
+  opacity: 1;
 }
 
-/*<<<77*/
+/*<<<777*/
 /* Bordure de la section experience/formation*/
 .timeline {
-  border-left: 2px solid #E6E9ED;
+  border-left: 5px solid #E6E9ED;
   padding: 1rem 0;
 }
 
 .timeline-card {
   position: relative;
-  margin-left: 31px;
-  border-left: 2px solid;
+  margin-left: 25px;
+  border-left: 7px solid;
   margin-bottom: 2rem;
 }
 
@@ -212,6 +191,40 @@ p {
   z-index: 1;
 }
 
+@media all and (max-device-width: 480px) {
+  .card-body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /*>>>777 */
+  .timeline {
+    border-left: 2px solid #E6E9ED;
+  }
+
+  .timeline-card {
+    position: relative;
+    margin-left: 3px;
+    border-left: 2px solid;
+  }
+
+  /* Motifs de bordure de la section experience/foramtion*/
+
+  .timeline-card:before {
+    display :none;
+  }
+
+  .timeline-card:after {
+    display :none;
+  }
+
+  ul{
+    margin: 0;
+    padding: 1rem;
+  }
+  /*<<<777*/
+}
+
 /* Couleur de bordure de la section experience/foramtion*/
 .timeline-card-primary {
   border-left-color: #4A89DC;
@@ -235,136 +248,4 @@ p {
 
 .timeline-card-success:after {
   background-color: #37BC9B;
-}
-
-/* footer
-
-footer a:not(.nav-link) {
-  color: inherit;
-  border-bottom: 1px dashed;
-  text-decoration: none;
-  cursor: pointer; }
-*/
-
-@media all and (max-device-width: 480px) {
-
-
-  .card-body{
-    margin: 0;
-    padding: 0;
-  }
-  /*>>>777 */
-  .timeline {
-    border-left: 2px solid #E6E9ED;
-    padding: 1rem 0;
-  }
-
-  .timeline-card {
-    position: relative;
-    margin-left: 3px;
-    border-left: 2px solid;
-    margin-bottom: 2rem;
-  }
-
-  .timeline-card:last-child {
-    margin-bottom: 1rem;
-  }
-
-  /* Motifs de bordure de la section experience/foramtion*/
-  .timeline-card:before {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    background-color: #fff;
-    border-radius: 0px;
-    width: 0px;
-    height: 0px;
-    top: 0px;/**/
-    left: 0px;/**/
-    border: 0px solid;
-    z-index: 2;
-  }
-
-  .timeline-card:after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    background-color: currentColor;
-    width: 0px;
-    height: 0px;
-    top: 0px;/**/
-    left: 0px;/**/
-    z-index: 1;
-  }
-
-
-  /*<<<777*/
-}
-
-
-
-
-
-/* print */
-@media print {
-  body {
-    background-color: #fff;
-  }
-
-  .container {
-    width: auto;
-    max-width: 100%;
-    padding: 0;
-  }
-
-  .cover, .cover-bg {
-    border-radius: 0;
-  }
-
-  .cover.shadow-lg {
-    box-shadow: none !important;
-  }
-
-  .cover-bg {
-    padding: 5rem !important;
-    padding-bottom: 10px !important;
-  }
-
-  .avatar {
-    margin-top: -10px;
-  }
-
-  .about-section {
-    padding: 6.5rem 5rem 2rem !important;
-  }
-
-  .skills-section,
-  .work-experience-section,
-  .education-section,
-  .contant-section {
-    padding: 1.5rem 5rem 2rem !important;
-  }
-
-  .page-break {
-    padding-top: 5rem;
-    page-break-before: always;
-  }
-
-  .progress {
-    background-color: #F5F5F5 !important;
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#F5F5F5', endColorstr='#F5F5F5')" !important;
-  }
-
-  .progress-bar-info {
-    display: block !important;
-    background-color: #5BC0DE !important;
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#5BC0DE', endColorstr='#5BC0DE')" !important;
-  }
-
-  .progress, .progress>.progress-bar {
-    display: block !important;
-    -webkit-print-color-adjust: exact !important;
-    box-shadow: inset 0 0 !important;
-    -webkit-box-shadow: inset 0 0 !important;
-  }
 }
